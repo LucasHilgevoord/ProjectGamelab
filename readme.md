@@ -1,8 +1,7 @@
 # Speciale Input - Output
 Team #
-1. <Teamlid1>
-2. <Teamlid2>
-3. <Teamlid3>
+1. Troy Toendang
+2. Lucas Hilgevoord
 
 ## Ontwerp
 Beschrijf hier kort jullie project
