@@ -6,47 +6,56 @@ using UnityEngine.AI;
 public class DuckMovement : MonoBehaviour {
 
     [SerializeField] private GameObject area;
+    [SerializeField] private float flyingSpeed = 0.01f;
     private Vector3 center;
     private Vector3 size;
-    private bool isFlying;
-    [SerializeField] private float flyingSpeed = 0.01f;
     private Vector3 pos;
+    private bool isFlying;
+    private bool isAlive;
+    private Animator anim;
+    private Rigidbody2D rb;
 
 
     // Use this for initialization
     void Start () {
+        anim = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
+        isAlive = true;
+
         center = area.transform.position;
         size = new Vector3(area.transform.localScale.x, area.transform.localScale.y, area.transform.localScale.z);
         newPosition();
-
-    }
-	
-	// Update is called once per frame
-	void Update () {
-        if (!isFlying) {
-            newPosition();
-            isFlying = true;
-        } else {
-            var targetRotation = Quaternion.LookRotation(pos - transform.position);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 1.8f * Time.deltaTime);
-            //transform.LookAt(pos);
-
-            transform.position = Vector3.MoveTowards(transform.position, pos, flyingSpeed);
-        }
-
-        if (Vector3.Distance(pos, transform.position) < 0.1){
-            isFlying = false;
-        }
-            
     }
 
+    // Update is called once per frame
+    void Update() {
+        if (isAlive) {
+            if (!isFlying) {
+                newPosition();
+                isFlying = true;
+            } else {
+                transform.right = pos - transform.position;
+                transform.position = Vector3.MoveTowards(transform.position, pos, flyingSpeed);
+            }
+
+            if (Vector3.Distance(pos, transform.position) < 0.1) {
+                isFlying = false;
+            }
+        }
+    }
+   
     void newPosition() {
-        pos = center + new Vector3(Random.Range(-size.x / 2, size.x / 2), Random.Range(-size.y / 2, size.y / 2), Random.Range(-size.z / 2, size.z / 2));
+        pos = center + new Vector3(Random.Range(-size.x / 2, size.x / 2), Random.Range(-size.y / 2, size.y / 2), 0);
     }
 
-
-    void OnDrawGizmos() {
-        Gizmos.color = new Color(1, 0, 0, 0.5f);
-        Gizmos.DrawCube(area.transform.localPosition, size);
+    //Testing
+    void OnMouseDown() {
+        isAlive = false;
+        transform.right = new Vector3(0, 0, 0);
+        anim.SetBool("isHit", true);
+        Destroy(gameObject, 2f);
+        Debug.Log("hit");
+        rb.gravityScale = 1;
+        anim.SetBool("isFalling", true);
     }
 }

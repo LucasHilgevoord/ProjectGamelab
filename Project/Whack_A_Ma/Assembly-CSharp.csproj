@@ -51,7 +51,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Camera\CameraBackground.cs" />
      <Compile Include="Assets\Scripts\Ducks\DuckMovement.cs" />
+     <Compile Include="Assets\Scripts\Timer\Timer.cs" />
      <None Include="Assets\Downloads\FPS Pack by @Quaternius\Support me.txt" />
  <Reference Include="Unity.PackageManagerUI.Editor">
  <HintPath>C:/Users/lucas/Documents/GitHub/ProjectGamelab/Project/Whack_A_Ma/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
