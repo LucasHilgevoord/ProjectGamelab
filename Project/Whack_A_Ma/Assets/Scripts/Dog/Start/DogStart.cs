@@ -8,15 +8,15 @@ public class DogStart : MonoBehaviour {
     [SerializeField]
     private GameObject dog;
     private SpriteRenderer rend;
-    //private GameStart gameStart;
-    //[SerializeField]
-    //private GameObject GameStartObject;
+    private GameStart gameStart;
+    [SerializeField]
+    private GameObject GameStartObject;
 
     // Use this for initialization
     void Start() {
         anim = GetComponentInChildren<Animator>();
         rend = GetComponentInChildren<SpriteRenderer>();
-        //gameStart = GameStartObject.GetComponent<GameStart>();
+        gameStart = GameStartObject.GetComponent<GameStart>();
     }
 
     // Update is called once per frame
@@ -41,7 +41,7 @@ public class DogStart : MonoBehaviour {
     public void Fall() {
         rend.sortingOrder = 3;
         Destroy(gameObject, 2f);
-        GameStart.gameStart = true;
+        gameStart.gameStart = true;
 
     }
 }

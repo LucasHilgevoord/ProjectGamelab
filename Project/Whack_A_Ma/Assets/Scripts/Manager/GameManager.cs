@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour {
     [SerializeField]
     private GameObject sky;
     [SerializeField]
+    private GameObject clouds;
+    [SerializeField]
     private GameObject webcamPlane;
     private bool camSwitch;
 
@@ -29,10 +31,12 @@ public class GameManager : MonoBehaviour {
     void SwitchCamera() {
         if (!camSwitch) {
             sky.SetActive(false);
+            clouds.SetActive(false);
             webcamPlane.SetActive(true);
             camSwitch = true;
         } else {
             sky.SetActive(true);
+            clouds.SetActive(true);
             webcamPlane.SetActive(false);
             camSwitch = false;
         }

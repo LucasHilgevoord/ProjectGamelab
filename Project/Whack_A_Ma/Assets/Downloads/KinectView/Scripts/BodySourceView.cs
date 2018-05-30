@@ -9,6 +9,10 @@ public class BodySourceView : MonoBehaviour
 {
     public BodySourceManager mBodySourceManager;
     public GameObject mJointObject;
+    public GameObject mJointObjectTwo;
+
+    int maxBodies;
+    int bodyCount;
     
     private Dictionary<ulong, GameObject> mBodies = new Dictionary<ulong, GameObject>();
     private List<JointType> _joints = new List<JointType>
@@ -19,6 +23,9 @@ public class BodySourceView : MonoBehaviour
 
     void Update () 
     {
+        maxBodies = 2;
+        bodyCount = 0;
+
         #region Get Kinect data
         Body[] data = mBodySourceManager.GetData();
         if (data == null)
@@ -57,8 +64,10 @@ public class BodySourceView : MonoBehaviour
             if (body == null)
                 continue;
 
-            if (body.IsTracked)
+            if (body.IsTracked && bodyCount <= maxBodies)
             {
+                bodyCount += 1;
+
                 // If body isn't tracked, create body
                 if (!mBodies.ContainsKey(body.TrackingId))
                     mBodies[body.TrackingId] = CreateBodyObject(body.TrackingId);
@@ -68,10 +77,14 @@ public class BodySourceView : MonoBehaviour
             }
         }
         #endregion
+
+        Debug.Log(bodyCount);
     }
 
     private GameObject CreateBodyObject(ulong id)
     {
+        GameObject newJoint;
+
         // Create body parent
         GameObject body = new GameObject("Body:" + id);
 
@@ -79,11 +92,34 @@ public class BodySourceView : MonoBehaviour
         foreach (JointType joint in _joints)
         {
             // Create object
+            /*
             GameObject newJoint = Instantiate(mJointObject);
             newJoint.name = joint.ToString();
 
             // Parent to body
             newJoint.transform.parent = body.transform;
+            */
+
+            if (bodyCount == 1)
+            {
+                newJoint = Instantiate(mJointObject);
+                newJoint.name = joint.ToString();
+
+                // Parent to body
+                newJoint.transform.parent = body.transform;
+            }
+            else if (bodyCount == 2)
+            {
+                newJoint = Instantiate(mJointObjectTwo);
+                newJoint.name = joint.ToString();
+
+                // Parent to body
+                newJoint.transform.parent = body.transform;
+            }
+            else if (bodyCount >= maxBodies)
+            {
+                return null;
+            }
         }
 
         return body;
