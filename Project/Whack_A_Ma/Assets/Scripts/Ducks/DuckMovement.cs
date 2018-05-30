@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class DuckMovement : MonoBehaviour {
 
-    [SerializeField]
+    //[SerializeField]
     private GameObject area;
     [SerializeField]
     private float flyingSpeed = 0.01f;
@@ -21,7 +21,7 @@ public class DuckMovement : MonoBehaviour {
     private Vector3 pos;
 
     private bool isFlying;
-    private bool isAlive;
+    public bool isAlive;
 
     private Animator anim;
     private Rigidbody2D rb;
@@ -41,9 +41,8 @@ public class DuckMovement : MonoBehaviour {
         points = gameManager.GetComponent<ScoreManager>();
 
         isAlive = true;
-
-        center = area.transform.position;
-        size = new Vector3(area.transform.localScale.x, area.transform.localScale.y, area.transform.localScale.z);
+        area = GameObject.Find("FlyBox");
+        DecideArea();
         newPosition();
     }
 
@@ -68,6 +67,11 @@ public class DuckMovement : MonoBehaviour {
                 isFlying = false;
             }
         }
+    }
+
+    void DecideArea() {
+        center = area.transform.position;
+        size = new Vector3(area.transform.localScale.x, area.transform.localScale.y, area.transform.localScale.z);
     }
 
     void newPosition() {

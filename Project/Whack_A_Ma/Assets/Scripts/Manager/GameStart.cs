@@ -5,28 +5,27 @@ using UnityEngine.UI;
 
 public class GameStart : MonoBehaviour {
 
-    public bool gameStart;
+    public static bool gameStart;
     [SerializeField]
     private CanvasGroup canvasGroup = null;
     [SerializeField]
     private GameObject startText;
     [SerializeField]
-    private GameObject Ducks;
-    [SerializeField]
     private GameObject Timer;
 
     private Timer startTimer;
     private float fadeSpeed = 2f;
+    private bool OpenStartText;
     
     void Start() {
         startTimer = Timer.GetComponent<Timer>();
-        Ducks.SetActive(false);
         canvasGroup.alpha = 0;
         startText.SetActive(false);
     }
 
     void Update() {
-        if (gameStart) {
+        if (gameStart && !OpenStartText) {
+            OpenStartText = true;
             StartGame();
         }
     }
@@ -35,7 +34,6 @@ public class GameStart : MonoBehaviour {
         startTimer.gameStart = true;
         StartCoroutine(OpenWindow());
         StartCoroutine(CloseWindow());
-        Ducks.SetActive(true);
     }
 
     IEnumerator OpenWindow() {
@@ -48,13 +46,12 @@ public class GameStart : MonoBehaviour {
 
     IEnumerator CloseWindow() {
         yield return new WaitForSeconds(2f);
-        while (canvasGroup.alpha > 0) {
+        while (canvasGroup.alpha > 0 && startText != null) {
             canvasGroup.alpha -= Time.deltaTime * fadeSpeed;
             yield return null;
         }
         if (canvasGroup.alpha == 0) {
             startText.SetActive(false);
-            gameStart = false;
         }
     }
 }

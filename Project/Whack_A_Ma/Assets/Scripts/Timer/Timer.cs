@@ -30,6 +30,7 @@ public class Timer : MonoBehaviour {
                 timeLeft -= Time.deltaTime;
                 if (timeLeft < 0) {
                     Debug.Log("Tijd is op");
+                    GameStart.gameStart = false;
                     Application.LoadLevel(Application.loadedLevel);
                 }
             }

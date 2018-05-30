@@ -8,29 +8,41 @@ public class DuckManager : MonoBehaviour {
     private GameObject[] spawnPoints;
     [SerializeField]
     private GameObject duckPrefab;
+    [SerializeField]
+    private GameObject duck2Prefab;
+
     private GameObject currentSpawnPoint;
     private bool hasSpawned;
-
-	// Use this for initialization
-	void Start () {
-		
-	}
+    private int ShinyNumber = 7;
 	
 	// Update is called once per frame
-	void Update () {
-        GameObject[] ducks = GameObject.FindGameObjectsWithTag("Bird");
-        if (!hasSpawned && (ducks.Length < 10)) {
-            hasSpawned = true;
-            StartCoroutine("SpawnDuck");
+	void Update () 
+    {
+        if (GameStart.gameStart) {
+            GameObject[] ducks = GameObject.FindGameObjectsWithTag("Bird");
+            if (!hasSpawned && (ducks.Length < 10)) {
+                hasSpawned = true;
+                StartCoroutine("SpawnDuck");
+
+            }
         }
 	}
 
     IEnumerator SpawnDuck() {
-        yield return new WaitForSeconds(Random.Range(1f, 2f));
+        yield return new WaitForSeconds(Random.Range(0.5f, 1f));
+        ResetSpawnpoint();
+        int randomNum = Random.Range(1, 10);
+        if(randomNum == ShinyNumber) {
+            Instantiate(duck2Prefab, currentSpawnPoint.transform);
+        } else {
+            Instantiate(duckPrefab, currentSpawnPoint.transform);
+        }
+        hasSpawned = false;
+    }
+
+    void ResetSpawnpoint() {
         int index = Random.Range(1, spawnPoints.Length);
         currentSpawnPoint = spawnPoints[index];
-        Instantiate(duckPrefab, currentSpawnPoint.transform);
-        hasSpawned = false;
     }
 
 }
