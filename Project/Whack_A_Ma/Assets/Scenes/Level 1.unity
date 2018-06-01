@@ -2284,6 +2284,7 @@ MonoBehaviour:
   sky: {fileID: 1175102616}
   webcamPlane: {fileID: 1473448222}
   CursorNormal: {fileID: 2800000, guid: 512074be00aae134c98ee1a021051398, type: 3}
+  gameFinish: 0
 --- !u!4 &1501628069
 Transform:
   m_ObjectHideFlags: 0

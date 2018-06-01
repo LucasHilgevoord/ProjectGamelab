@@ -31,6 +31,7 @@ public class Timer : MonoBehaviour {
                 if (timeLeft < 0) {
                     Debug.Log("Tijd is op");
                     GameStart.gameStart = false;
+
                     Application.LoadLevel(Application.loadedLevel);
                 }
             }

@@ -10,12 +10,15 @@ public class GameManager : MonoBehaviour {
     [SerializeField]
     private GameObject webcamPlane;
     private bool camSwitch;
+    
 
     [SerializeField]
     private Texture2D CursorNormal;
+    public bool gameFinish;
 
 
     void Update() {
+        FinishGame();
         if (Input.GetKeyDown(KeyCode.Keypad0))
             SwitchCamera();
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -36,5 +39,9 @@ public class GameManager : MonoBehaviour {
             webcamPlane.SetActive(false);
             camSwitch = false;
         }
+    }
+
+    void FinishGame() {
+
     }
 }
