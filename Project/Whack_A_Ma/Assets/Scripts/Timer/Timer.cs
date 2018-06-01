@@ -30,8 +30,11 @@ public class Timer : MonoBehaviour {
                 timeLeft -= Time.deltaTime;
                 if (timeLeft < 0) {
                     Debug.Log("Tijd is op");
+<<<<<<< HEAD
                     GameStart.gameStart = false;
 
+=======
+>>>>>>> Troy
                     Application.LoadLevel(Application.loadedLevel);
                 }
             }

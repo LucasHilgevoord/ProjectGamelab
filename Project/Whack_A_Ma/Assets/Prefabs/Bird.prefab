@@ -204,10 +204,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c80b0ca0c7dadc848850bc2b2bcff0b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  area: {fileID: 0}
   flyingSpeed: 0.05
-  pointValue: 100
+  pointValue: 200
   quackAudio: {fileID: 8300000, guid: 540f734adb2f4ff48800350276e8936f, type: 3}
-  isAlive: 0
+  ScoreManager: {fileID: 0}
 --- !u!212 &212640880311944242
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -243,7 +244,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: 83ddf4b24c81a8b4c999d6b52acfc223, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fc0c96dc596a8074bb4f0e9f1743192f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

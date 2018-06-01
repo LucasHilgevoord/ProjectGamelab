@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Level 1.unity
-    guid: 6123e52531e2477458fcee780a2eb837
+    path: Assets/Scenes/Troy Scene.unity
+    guid: 32edddc166f0cdc47a7824244024be2e
+  - enabled: 1
+    path: Assets/Scenes/KinectScene.unity
+    guid: 2c36ddc7db3d90c46adcc4d34d28a39d
   m_configObjects: {}
