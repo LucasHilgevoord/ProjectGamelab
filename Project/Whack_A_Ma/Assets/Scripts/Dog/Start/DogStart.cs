@@ -41,7 +41,7 @@ public class DogStart : MonoBehaviour {
     public void Fall() {
         rend.sortingOrder = 3;
         Destroy(gameObject, 2f);
-        gameStart.gameStart = true;
+        ///gameStart.gameStart = true;
 
     }
 }

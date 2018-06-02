@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Timer : MonoBehaviour {
+public class Timer : MonoBehaviour
+{
 
     [SerializeField]
     private float maxTime;
@@ -13,28 +14,31 @@ public class Timer : MonoBehaviour {
     public bool gameStart;
 
     // Use this for initialization
-    void Start() {
+    void Start()
+    {
         timeLeft = maxTime;
         timerText.text = "-=" + Mathf.RoundToInt(timeLeft) + "=-";
     }
 
     // Update is called once per frame
-    void Update() {
-        if (gameStart) {
-            if (timeLeft > 9) {
+    void Update()
+    {
+        if (gameStart)
+        {
+            if (timeLeft > 9)
+            {
                 timerText.text = "-=" + Mathf.RoundToInt(timeLeft) + "=-";
                 timeLeft -= Time.deltaTime;
             }
-            if (timeLeft <= 9.5f && timeLeft >= 0) {
+            if (timeLeft <= 9.5f && timeLeft >= 0)
+            {
                 timerText.text = "-=0" + Mathf.RoundToInt(timeLeft) + "=-";
                 timeLeft -= Time.deltaTime;
-                if (timeLeft < 0) {
+                if (timeLeft < 0)
+                {
                     Debug.Log("Tijd is op");
-<<<<<<< HEAD
                     GameStart.gameStart = false;
 
-=======
->>>>>>> Troy
                     Application.LoadLevel(Application.loadedLevel);
                 }
             }
