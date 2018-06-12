@@ -45,7 +45,8 @@ https://goo.gl/UCM48x
 
 ## Portfolio
 Zet hier de links neer naar jullie documentatie.
-* [Onderzoek]()
+* Onderzoek: https://goo.gl/XNdQ5K
+
 * [Ontwerp]()
 * [Testrapportage]()
 * [Presentatie]()
