@@ -39,7 +39,8 @@ https://github.com/Troy2000/ProjectGamelab
 Trello:
 https://trello.com/b/vVQ1XhPd/whack-a-ma
 
-
+Logboek:
+https://docs.google.com/spreadsheets/d/13hrBeHzQuVVpxPRr_Kz6N_u0rguUvVwv_9xNUS_-u2U/edit#gid=1442557990
 
 
 ## Portfolio
