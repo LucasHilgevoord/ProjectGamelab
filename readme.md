@@ -5,6 +5,7 @@ Team #
 
 ## Ontwerp
 Whack-A-Ma is een multiplayer augmented reality game. In een stream is het mogelijk om live beelden met eenden gemixt te zien.
+
 Het spel: Door middel van de speler zijn hand moeten de spelers de vogels uit de lucht schieten. Dit gebeurt door de marker op de vogel te houden en het voor een paar seconden er op te houden.
 Het doel is om van de speler zijn tegenstander te winnen door een meer hoeveelheid punten te bemachtigen door middel van het schieten van de eenden. Na de 60 seconden (Dit kan veranderd worden door de speler) worden de scores vergeleken en wint de speler met de meeste punten.
 
@@ -42,6 +43,8 @@ Hardware:
 - Camera/Webcam
 - Tv Screen
 
+Na mediabites zijn we verder gedaan met het spel uitbreiden en het verbeteren. Ook moest er volgens de opdracht een face recognition in komen. Hier hebben we onderzoek naar gedaan en vonden we een library die ons verder kon helpen. Na het onderzoek en de tutorials die we gekeken hebben kwamen we er achter dat er voor unity een asset bestaat in de asset store die 60 euro kosten. Hieruit hebben we een besloten dat we het maar zouden laten. Om nog wel een beetje het effect te geven 
+
 ## Scrum
 Github:
 https://github.com/Troy2000/ProjectGamelab
@@ -55,7 +58,17 @@ https://goo.gl/UCM48x
 
 ## Portfolio
 Zet hier de links neer naar jullie documentatie.
+* Bronnenlijst: https://goo.gl/Rj5FvE
+* Beschrijving: https://goo.gl/dnSKPb
 * Onderzoek: https://goo.gl/XNdQ5K
-* Presentatie: https://goo.gl/EzGYie
-* [Ontwerp]()
-* [Testrapportage]()
+
+* Ontwerpdocument: https://goo.gl/ZJGz82
+* Tussentijdse test: https://goo.gl/4Rktd3
+
+* Product download:
+* Testplan: https://goo.gl/tztwMA
+* Testrapport: https://goo.gl/Js2sZK
+* Usertest video: https://youtu.be/WM0dmeyCN_A
+
+* Presentatie 2: https://goo.gl/EzGYie
+* Presentatie 3: 
