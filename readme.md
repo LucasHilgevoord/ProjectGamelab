@@ -4,8 +4,18 @@ Team #
 2. Lucas Hilgevoord
 
 ## Ontwerp
-Whack-A-Ma is een multiplayer augmented reality game. In een stream worden live beelden van voorbijgangers met vogels gemixt. Het spel: Door middel van gebaren moeten de spelers de vogels uit de lucht slaan. Als een speler een voorbijganger raakt, dan geldt dat als collateral daage. Een speler mag alleen zijn eigen vogels uit de lucht slaan.
-Onze speciale input is een Kinect die de player detecteerd.
+Whack-A-Ma is een multiplayer augmented reality game. In een stream is het mogelijk om live beelden met eenden gemixt te zien.
+Het spel: Door middel van de speler zijn hand moeten de spelers de vogels uit de lucht schieten. Dit gebeurt door de marker op de vogel te houden en het voor een paar seconden er op te houden.
+Het doel is om van de speler zijn tegenstander te winnen door een meer hoeveelheid punten te bemachtigen door middel van het schieten van de eenden. Na de 60 seconden (Dit kan veranderd worden door de speler) worden de scores vergeleken en wint de speler met de meeste punten.
+
+Er zijn vier verschillende type eenden die in het spel voorkomen. 
+De groene eend: Sloom, 100 punten.
+De blauwe eend: Redelijke snelheid, 250 punten.
+De rode eend: Snel, Geen countdown, -400 punten.
+De goude eend: Snel, 1000 punten.
+
+Onze speciale input is een Kinect die de player zijn hand detecteert.
+
 
 ## Onderzoek
 Engines:
