@@ -62,7 +62,7 @@ Zet hier de links neer naar jullie documentatie.
 * Beschrijving: https://goo.gl/dnSKPb
 * Onderzoek: https://goo.gl/XNdQ5K
 
-* Ontwerpdocument: https://goo.gl/ZJGz82
+* Ontwerpdocument: https://goo.gl/Z5FU4d
 * Tussentijdse test: https://goo.gl/4Rktd3
 
 * Product download:
@@ -71,4 +71,4 @@ Zet hier de links neer naar jullie documentatie.
 * Usertest video: https://youtu.be/WM0dmeyCN_A
 
 * Presentatie 2: https://goo.gl/EzGYie
-* Presentatie 3: 
+* Presentatie 3: https://goo.gl/68ZT9E
