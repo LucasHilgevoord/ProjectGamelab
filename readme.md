@@ -65,7 +65,9 @@ Zet hier de links neer naar jullie documentatie.
 * Ontwerpdocument: https://goo.gl/Z5FU4d
 * Tussentijdse test: https://goo.gl/4Rktd3
 
-* Product download:
+* Product zonder kinect download:
+* Product met kinect download:
+
 * Testplan: https://goo.gl/tztwMA
 * Testrapport: https://goo.gl/Js2sZK
 * Usertest video: https://youtu.be/WM0dmeyCN_A
