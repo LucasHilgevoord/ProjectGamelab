@@ -57,7 +57,6 @@ https://goo.gl/UCM48x
 
 
 ## Portfolio
-Zet hier de links neer naar jullie documentatie.
 * Bronnenlijst: https://goo.gl/Rj5FvE
 * Beschrijving: https://goo.gl/dnSKPb
 * Onderzoek: https://goo.gl/wt38aR
